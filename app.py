@@ -1,9 +1,18 @@
-from flask import Flask
-from views import views
+from flask import Flask, render_template, request, flash
 
 app = Flask(__name__)
-app.register_blueprint(views, url_prefix="/views")
+app.secret_key = "munthu koma uyu"
 
 
-if __name__ == '__main__':
+@app.route("/hello")
+def index():
+    flash("whats your name")
+    return render_template("index.html")
+
+if __name__ == '__main':
     app.run(debug=True, port=8000)
+
+@app.route("/greet", methods=["POST", "GET"])
+def greet():
+    flash
+    request.form['name_input']
