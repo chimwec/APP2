@@ -9,10 +9,9 @@ def index():
     flash("whats your name")
     return render_template("index.html")
 
-if __name__ == '__main':
-    app.run(debug=True, port=8000)
 
 @app.route("/greet", methods=["POST", "GET"])
 def greet():
-    flash
-    request.form['name_input']
+    flash("Hi " + str(request.form["name_input"]) + ", great to see you!")
+    return render_template("index.html")
+
