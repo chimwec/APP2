@@ -1,43 +1,30 @@
-body {
-    background-color: slategray;
-    text-align: center;
+/* Reset default margin and padding on the ul and li elements */
+nav ul, nav li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-p {
-    color: white;
-    font-family: shanti;
-    font-size: 1.2em;
-    margin: 20px;
+/* Style for the navigation menu */
+nav ul {
+    display: flex; /* Display the menu items in a row */
+    background-color: red; /* Background color for the navigation bar */
+    padding: 20px; /* Add some padding around the menu */
 }
 
-img {
-    margin: 60px 0 30px 0;
-    width: 250px;
+nav li {
+    margin-right: 20px; /* Add spacing between menu items */
 }
 
-input {
-    width: 300px;
-    height: 50px;
-    margin: 20px;
-    border: none;
-    border-radius: 10px;
-    font-family: shanti;
-    text-align: center;
-    font-size: 1.3em;
+nav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: white; /* Text color for menu items */
+    font-weight: bold; /* Make the text bold */
+    transition: color 0.3s; /* Add a smooth color transition on hover */
 }
 
-input:focus {
-    border: solid 5px #00FFCE;
-    outline: none;
+/* Change link color on hover */
+nav a:hover {
+    color: #ff9900; /* Change the text color to a different color on hover */
 }
 
-#greet {
-    background-color: palevioletred;
-    color: white;
-    width: 200px;
-}
-
-#greet:hover {
-    background-color: mediumvioletred;
-    cursor: pointer;
-}
