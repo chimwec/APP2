@@ -1,6 +1,7 @@
 /* Reset default margin and padding on the ul and li elements */
 nav ul, nav li {
     margin: 0;
+    text-align: end;
     padding: 0;
     list-style: none;
 }
@@ -8,8 +9,9 @@ nav ul, nav li {
 /* Style for the navigation menu */
 nav ul {
     display: flex; /* Display the menu items in a row */
-    background-color: red; /* Background color for the navigation bar */
+    background-color: yellow; /* Background color for the navigation bar */
     padding: 20px; /* Add some padding around the menu */
+    justify-content: flex-end;
 }
 
 nav li {
@@ -27,4 +29,24 @@ nav a {
 nav a:hover {
     color: #ff9900; /* Change the text color to a different color on hover */
 }
+.bottom-links ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
 
+.bottom-links li {
+    margin: 0 15px;
+}
+
+
+.bottom-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.bottom-links a:hover {
+    color: #ff9900;
+}
