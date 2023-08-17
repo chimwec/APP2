@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 app.secret_key = "munthu koma uyu"
@@ -6,12 +6,9 @@ app.secret_key = "munthu koma uyu"
 
 @app.route("/hello")
 def index():
-    flash("what's your name?")
     return render_template("index.html")
 
-
-@app.route("/greet", methods=["POST", "GET"])
-def greet():
-    flash("Hi " + str(request.form["name_input"]) + ", great to see you!")
-    return render_template("index.html")
-
+#when i click the link in the browser it should take me to the route
+@app.route("/home")
+def home():
+    return render_template(home)
