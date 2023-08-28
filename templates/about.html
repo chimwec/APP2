@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About Page</title>
-</head>
-<body>
+{% extends "index.html" %}
+{% block content %}
     <h1>Welcome to the About Page</h1>
     <p>Nyasa esports was founded in 2020, its core idea is to help local people in expanding their gaming culture.</p>
     <p>Nyasa esports is founded by Chimwemwe who is an averd gamer by nature</p>
     <p>Our core values is to bring esports to the masses who cant access the required facilities<br>the required gear to game to there abitities</p>
-    <a href="{{ url_for('contact') }}">Go to contact Page</a>
-</body>
-</html>
+{% endblock %}
