@@ -1,52 +1,31 @@
-/* Reset default margin and padding on the ul and li elements */
-nav ul, nav li {
-    margin: 0;
-    text-align: end;
-    padding: 0;
-    list-style: none;
-}
-
-/* Style for the navigation menu */
-nav ul {
-    display: flex; /* Display the menu items in a row */
-    background-color: yellow; /* Background color for the navigation bar */
-    padding: 20px; /* Add some padding around the menu */
-    justify-content: flex-end;
-}
-
-nav li {
-    margin-right: 20px; /* Add spacing between menu items */
-}
-
-nav a {
-    text-decoration: none; /* Remove underlines from links */
-    color: white; /* Text color for menu items */
-    font-weight: bold; /* Make the text bold */
-    transition: color 0.3s; /* Add a smooth color transition on hover */
-}
-
-/* Change link color on hover */
-nav a:hover {
-    color: #ff9900; /* Change the text color to a different color on hover */
-}
-.bottom-links ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-}
-
-.bottom-links li {
-    margin: 0 15px;
-}
-
-
-.bottom-links a {
-    text-decoration: none;
+/* Your updated CSS styles */
+.main-navigation {
+    background-color: #333;
     color: white;
-    font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px 0;
+    text-align: right; /* Aligns the navigation links to the right */
 }
 
-.bottom-links a:hover {
-    color: #ff9900;
+.nav-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
+.nav-links ul {
+    list-style: lower-roman;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: red;
+}
+
+/* Your existing CSS styles */
