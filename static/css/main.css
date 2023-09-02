@@ -1,26 +1,58 @@
 /* Your updated CSS styles */
-a {
+.h1 {
+    text-align: center;
+    background-color: none;
+    color: green;
+}
+.main-navigation {
     background-color: none;
     color: green;
     padding: 10px 0;
-    /*text-align: right; Aligns the navigation links to the right */
-    text-decoration: none;
+    text-align: right; /* Aligns the navigation links to the right */
+    text-size-adjust: 150px;
 }
 
-.links {
-    max-width: 1200px;
-    margin: 5 auto;
-    padding: 0 20px;
-}
-
-ul {
-    list-style: lower-roman;
-    margin: 0;
-    padding: 0;
-    text-align: right;
-}
-
-li {
+.nav-links li {
     display: inline-block;
     margin-left: 20px;
 }
+.nav-links a {
+    color: green;
+    text-decoration: none;
+}
+
+.bottom-links a {
+    color: green;
+    text-decoration: none;
+}
+
+.bottom-links {
+    background-color: none;
+    color: green;
+    text-align: right;
+    padding: 5px 0;
+}
+
+.bottom-links li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+img {
+    border-radius: 100px;
+    background-color: lightblue;
+    width: 80px;
+    height: 80px;
+}
+
+.image-one {
+    border: none;
+    height: 300px;
+    width: 300px;
+}
+
+.image-two {
+    height: 300px;
+    width: 300px;
+}
+/* Your existing CSS styles */
