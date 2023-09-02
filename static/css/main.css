@@ -1,31 +1,26 @@
 /* Your updated CSS styles */
-.main-navigation {
-    background-color: aqua;
-    color: white;
+a {
+    background-color: none;
+    color: green;
     padding: 10px 0;
-    text-align: right; /* Aligns the navigation links to the right */
+    /*text-align: right; Aligns the navigation links to the right */
+    text-decoration: none;
 }
 
-.nav-links {
+.links {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 5 auto;
     padding: 0 20px;
 }
 
-.nav-links ul {
+ul {
     list-style: lower-roman;
     margin: 0;
     padding: 0;
+    text-align: right;
 }
 
-.nav-links li {
+li {
     display: inline-block;
     margin-left: 20px;
 }
-
-.nav-links a {
-    color: white;
-    text-decoration: red;
-}
-
-/* Your existing CSS styles */
