@@ -9,12 +9,13 @@
     color: green;
     padding: 10px 0;
     text-align: right; /* Aligns the navigation links to the right */
-    text-size-adjust: 150px;
+    text-size-adjust: 200px;
 }
 
 .nav-links li {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 50px;
+    text-size-adjust: 300px;
 }
 .nav-links a {
     color: green;
@@ -35,24 +36,24 @@
 
 .bottom-links li {
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 img {
     border-radius: 100px;
     background-color: lightblue;
-    width: 80px;
+    width: 100px;
     height: 80px;
 }
 
 .image-one {
     border: none;
     height: 300px;
-    width: 300px;
+    width: 350px;
 }
 
 .image-two {
     height: 300px;
-    width: 300px;
+    width: 350px;
 }
 /* Your existing CSS styles */
