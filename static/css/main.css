@@ -10,7 +10,7 @@
     color: black;
     display: inline-block;
     margin: 20px;
-    text-size-adjust: 50px;
+    text-size-adjust: 100px;
 }
 
 .nav-links li {
@@ -62,5 +62,10 @@ img {
     height: 300px;
     width: 350px;
     margin: 100px;
+}
+
+p {
+    text-size-adjust: 100px;
+    text-align: center;
 }
 /* Your existing CSS styles */
