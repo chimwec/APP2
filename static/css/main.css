@@ -16,11 +16,12 @@
 .nav-links li {
     display: inline-block;
     margin-left: 50px;
-    text-size-adjust: 300px;
+    text-size-adjust: 50px;
 }
 .nav-links a {
     color: green;
     text-decoration: none;
+    text-size-adjust: 50px;
 }
 
 .bottom-links a {

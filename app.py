@@ -24,6 +24,10 @@ def game():
 def news():
     return render_template("news.html")
 
+@app.route("/follow_us")
+def follow_us():
+    return render_template("follow_us.html")
+
 
 if __name__ == '__main__':
     app.run()
