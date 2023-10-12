@@ -7,31 +7,38 @@
     text-size-adjust: 200px;
 }
 .h1 {
-    color: black;
+    color: white;
     display: inline-block;
     margin: 20px;
-    text-size-adjust: 100px;
+    text-size-adjust: 105px;
+}
+body {
+    background-image: url('https://raw.githubusercontent.com/chimwec/images/main/background-image.jpg'); /* Replace with the actual path to your image */
+    background-size: cover; /* This makes sure the image covers the whole page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 .nav-links li {
+    text-transform: uppercase;
     display: inline-block;
     margin-left: 50px;
-    text-size-adjust: 50px;
+    text-size-adjust: 80px;
 }
 .nav-links a {
-    color: green;
+    color: white;
     text-decoration: none;
-    text-size-adjust: 50px;
+    text-size-adjust: 80px;
 }
 
 .bottom-links a {
-    color: green;
+    text-transform: uppercase;
+    color: white;
     text-decoration: none;
 }
 
 .bottom-links {
     background-color: none;
-    color: green;
+    color: white;
     text-align: center;
     padding: 5px 0;
     margin: 100px;
@@ -54,14 +61,20 @@ img {
 
 .image-one {
     border: none;
-    height: 300px;
-    width: 350px;
+    height: 250px;
+    width: 250px;
     margin: 100px;
 }
 
 .image-two {
-    height: 300px;
-    width: 350px;
+    height: 250px;
+    width: 250px;
+    margin: 100px;
+}
+.image-three {
+    border: none;
+    height: 250px;
+    width: 250px;
     margin: 100px;
 }
 
