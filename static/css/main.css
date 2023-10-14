@@ -4,13 +4,13 @@
     color: green;
     padding: 10px 0;
     text-align: right; /* Aligns the navigation links to the right */
-    text-size-adjust: 200px;
+    font-size: 20px;
 }
 .h1 {
     color: white;
     display: inline-block;
     margin: 20px;
-    text-size-adjust: 105px;
+    font-size: 30px;
 }
 body {
     background-image: url('https://raw.githubusercontent.com/chimwec/images/main/background-image.jpg'); /* Replace with the actual path to your image */
@@ -22,12 +22,17 @@ body {
     text-transform: uppercase;
     display: inline-block;
     margin-left: 50px;
-    text-size-adjust: 80px;
+    font-size: 20px;
 }
 .nav-links a {
     color: white;
     text-decoration: none;
-    text-size-adjust: 80px;
+    font-size: 20px;
+}
+
+.p {
+    color: antiquewhite;
+    font-size: 20px;
 }
 
 .bottom-links a {
@@ -36,7 +41,7 @@ body {
     text-decoration: none;
 }
 
-.bottom-links {
+.bottom-links {   /* this is for the block contact and follow are in */
     background-color: none;
     color: white;
     text-align: center;
@@ -46,8 +51,8 @@ body {
 
 .bottom-links li {
     display: inline-block;
-    margin-left: 20px;
-    text-size-adjust: 50px;
+    margin-left: 20px;  /* this is for the contact and follow headings */
+    font-size: 20px;
 }
 
 img {
@@ -79,7 +84,8 @@ img {
 }
 
 p {
-    text-size-adjust: 100px;
     text-align: center;
+    font-size: 20px;
+    color: antiquewhite;
 }
 /* Your existing CSS styles */
