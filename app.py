@@ -26,7 +26,7 @@ def news():
 
 @app.route("/follow_us")
 def follow_us():
-    return render_template("follow_us.html")
+  return render_template("follow_us.html")
 
 
 if __name__ == '__main__':
