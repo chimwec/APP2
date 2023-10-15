@@ -1,7 +1,6 @@
 /* Your updated CSS styles */
 .main-navigation {
     background-color: none;
-    color: green;
     padding: 10px 0;
     text-align: right; /* Aligns the navigation links to the right */
     font-size: 20px;
@@ -18,30 +17,25 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-.nav-links li {
+.nav-links li { /* this is for the upper block about,game and news */
     text-transform: uppercase;
     display: inline-block;
     margin-left: 50px;
     font-size: 20px;
 }
-.nav-links a {
+.nav-links a { /* this is for the about,game and news */
     color: white;
     text-decoration: none;
     font-size: 20px;
 }
 
-.p {
-    color: antiquewhite;
-    font-size: 20px;
-}
-
-.bottom-links a {
+.bottom-links a { /*ths is for the contact and follow */
     text-transform: uppercase;
     color: white;
     text-decoration: none;
 }
 
-.bottom-links {   /* this is for the block contact and follow are in */
+.bottom-links {   /* this is for the block which contact and follow are in */
     background-color: none;
     color: white;
     text-align: center;
@@ -83,9 +77,14 @@ img {
     margin: 100px;
 }
 
-p {
+p { /* this is for all the paragraphs except for game and follow */
     text-align: center;
     font-size: 20px;
-    color: antiquewhite;
+    color: white;
+}
+
+li { /* this is for all the list in game and follow */
+    color: white;
+    font-size: 25px;
 }
 /* Your existing CSS styles */
