@@ -2,10 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyasa Esports</title>
     <link rel="stylesheet" href="/static/css/main.css">
         <!-- ... your existing head content ... -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
     
 </head>
 <body>
@@ -36,10 +39,12 @@
 
 <div><img src="https://raw.githubusercontent.com/chimwec/images/main/nlogo.jpeg" class="image-one"></div>
 
-<div><img src="https://raw.githubusercontent.com/chimwec/images/main/anime.jpeg" class="image-two"></div>
+<div><img src="https://raw.githubusercontent.com/chimwec/images/main/warrior.png" class="image-two"></div>
 
 <div><img src="https://raw.githubusercontent.com/chimwec/images/main/firelogo.png" class="image-three"></div>
 </div>
+
+
 
 <footer class="bottom-links">
     <ul>
@@ -51,16 +56,20 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-    $(document).ready(function(){
-        $('.slider').slick({
-            autoplay: true,// Enable autoplay
-            autoplaySpeed: 2000,  // Set autoplay speed in milliseconds (2 seconds in this case)
-            infinite: true,  // Enable infinite loop
-            speed: 500,  // Set transition speed in milliseconds
-            slidesToShow: 1,  // Number of slides to show at a time
-            slidesToScroll: 1  // Number of slides to scroll at a time
-        });
+
+   $(document).ready(function(){
+    $('.slider').slick({
+        autoplay: true,  // Enable autoplay
+        autoplaySpeed: 2000,  // Set autoplay speed in milliseconds (2 seconds in this case)
+        arrows: true,  // Enable navigation arrows
+        infinite: true,  // Enable infinite loop
+        speed: 500,  // Set transition speed in milliseconds
+        slidesToShow: 1,  // Number of slides to show at a time
+        slidesToScroll: 1  // Number of slides to scroll at a time
     });
+});
+
+
 </script>
      
 </body>

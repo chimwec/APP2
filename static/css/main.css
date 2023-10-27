@@ -26,7 +26,7 @@ body {
 .nav-links a { /* this is for the about,game and news */
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .bottom-links a { /*ths is for the contact and follow */
@@ -37,7 +37,7 @@ body {
 
 .bottom-links {   /* this is for the block which contact and follow are in */
     background-color: none;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     padding: 5px 0;
     margin: 100px;
@@ -46,7 +46,13 @@ body {
 .bottom-links li {
     display: inline-block;
     margin-left: 20px;  /* this is for the contact and follow headings */
-    font-size: 20px;
+    font-size: 25px;
+}
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 img {
@@ -58,22 +64,27 @@ img {
     margin: 0px;
 }
 
+body {
+    background-color: #ffffff; /* Default background color */
+}
+
+
 .image-one {
     border: none;
-    height: 250px;
-    width: 250px;
+    height: 450px;
+    width: 450px;
     margin: 100px;
 }
 
 .image-two {
-    height: 250px;
-    width: 250px;
+    height: 450px;
+    width: 450px;
     margin: 100px;
 }
 .image-three {
     border: none;
-    height: 250px;
-    width: 250px;
+    height: 450px;
+    width: 450px;
     margin: 100px;
 }
 
