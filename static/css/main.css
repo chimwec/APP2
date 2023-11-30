@@ -98,4 +98,8 @@ li { /* this is for all the list in game and follow */
     color: white;
     font-size: 25px;
 }
+form {
+    color:white;
+    text-align: right
+}
 /* Your existing CSS styles */

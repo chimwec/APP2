@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import UserMixin
+from flask_login import UserMixin, LoginManager
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
@@ -11,6 +11,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///my_database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 @app.route("/home")
 def index():
@@ -40,7 +46,8 @@ def follow_us():
 # update User to inherit from UserMixin here:
 class User(UserMixin,db.Model):
   id = db.Column(db.Integer, primary_key=True)
-  username = db.Column(db.String(64), index=True, unique=True)
+  username = db.Column(db.String(50), unique=True, nullable=False)
+  password = db.Column(db.String(50), nullable=False)
 
   # add the email and password_hash attributes here:
   email = db.Column(db.String(120), index = True, unique = True)
@@ -48,4 +55,5 @@ class User(UserMixin,db.Model):
 
 
 if __name__ == '__main__':
+    #db.create_all()
     app.run()
