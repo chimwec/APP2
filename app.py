@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -21,6 +21,14 @@ def load_user(user_id):
 @app.route("/home")
 def index():
     return render_template("index.html")
+
+@app.route('/home', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Your login logic here
+        # ...
+        return render_template('index.html')  # or render the same template as your main page
+
 
 #when i click the link in the browser it should take me to the route
 @app.route("/about")
