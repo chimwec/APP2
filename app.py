@@ -22,14 +22,6 @@ def load_user(user_id):
 def index():
     return render_template("index.html")
 
-@app.route('/home', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        # Your login logic here
-        # ...
-        return render_template('index.html')  # or render the same template as your main page
-
-
 #when i click the link in the browser it should take me to the route
 @app.route("/about")
 def about():
@@ -50,6 +42,24 @@ def news():
 @app.route("/follow_us")
 def follow_us():
   return render_template("follow_us.html")
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        # Check if the username is already taken
+        if User.query.filter_by(username=username).first():
+            return 'Username already taken, please choose another!.'
+
+        new_user = User(username=username, password=password)
+        db.session.add(new_user)
+        db.session.commit()
+
+        return 'Registration successful! You can now <a href="/login">login</a>.'
+
+    return render_template('register.html')
 
 # update User to inherit from UserMixin here:
 class User(UserMixin,db.Model):
