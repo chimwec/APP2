@@ -98,8 +98,29 @@ li { /* this is for all the list in game and follow */
     color: white;
     font-size: 25px;
 }
+
 form {
     color:white;
-    text-align: right
+    text-align: left;
+    margin: 20px; /* Adjust the value as needed */
+}
+
+#div-1 {
+    margin-top: 20px;
+    padding: auto;
+}
+#div-2 {
+    margin-top: 20px;
+    padding: auto;
+}
+
+#div-3 {
+    margin-top: 20px;
+    padding: auto;
+}
+
+#div-4 {
+    margin-top: 20px;
+    padding: auto;
 }
 /* Your existing CSS styles */

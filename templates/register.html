@@ -1,31 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
-</head>
-<body>
-  
-    <form class="form" method="post" action="{{ url_for('index') }}">
-        <label for="username">
-            Name:</label>
-        <input type="text" id="name" name="name" required><br>
+{% extends 'index.html' %}
+{% block content %}
+<form class="form" method="post" action="{{ url_for('index') }}">
+    <label for="username">
+        Name:</label>
+    <input type="text" id="name" name="name" required><br>
 
-        <label for="surname">Surname:</label>
-        <input type="surname" id="surname" name="surname" required><br>
+    <div class="child-1" id="div-1">
+    <label for="surname">Surname:</label>
+    <input type="surname" id="surname" name="surname" required><br>
+    </div>
 
-        <label for="username">Username:</label>
-        <input type="username" id="username" name="username" required><br>
+    <div class="child-2" id="div-2">
+    <label for="username">Username:</label>
+    <input type="username" id="username" name="username" required><br>
+    </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="surname" name="password" required><br>
+    <div class="child-3" id="div-3">
+    <label for="password">Password:</label>
+    <input type="password" id="surname" name="password" required><br>
+    </div>
 
+    <div class="child-4" id="div-4">
+    <button type="submit">register</button>
+    </div>
 
-
-        <button type="submit">register</button>
-    
-    </form>
-    <a href="/home">Back to Home</a>  
-</body>
-</html>
+</form>
+<a href="/home">Back to Home</a>  
+{% endblock %}
