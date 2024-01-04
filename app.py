@@ -1,8 +1,14 @@
 import email
-from flask import Flask, render_template, url_for, request, redirect
+from datetime import datetime
+from flask import Flask, render_template, url_for, request, redirect, flash
+import flask 
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
+
 
 
 app = Flask(__name__)
@@ -45,27 +51,35 @@ def follow_us():
   return render_template("follow_us.html")
 
 
+# registration form
+class RegistrationForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+  # add email field here:
+    email = StringField('Email', validators=[DataRequired(), Email()])
+  # add password fields here:
+    password = PasswordField('Password', validators=[DataRequired()])
+    password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('Register')
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        email = request.form['email']
-
-        # Check if the username is already taken
-        if User.query.filter_by(username=username).first():
-            return 'Username already taken, please choose another!.'
-
-        new_user = User(username=username, email=email, password=generate_password_hash(password, method='sha256'))
-        db.session.add(new_user)
+    form = RegistrationForm(csrf_enabled=False)
+    if form.validate_on_submit():
+    # define user with data from form here:
+        user = User(username=form.username.data, email=form.email.data)
+    # set user's password here:
+        user.set_password(form.password.data)
+        db.session.add(user)
         db.session.commit()
+    return render_template('register.html', title='Register', form=form)
 
-        # Login the user after registration
-        login_user(new_user)
-
-        return redirect(url_for('index'))
-
-    return render_template('register.html')
+#added this form lets see how it works
+class LoginForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    remember_me = BooleanField('Remember Me')
+    submit = SubmitField('Sign In')
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -80,13 +94,16 @@ def login():
             # Check if the entered password is correct
             if check_password_hash(user.password, password):
                 login_user(user)
+
+                flask.flash('Logged in succeessfully.')
+                
                 return redirect(url_for('index'))
             else:
                 return 'Invalid password'
         else:
             return 'User not found. Please register.'
 
-    return render_template('login.html')
+    return render_template('login.html', form=form)
 
 
 @app.route("/logout")
