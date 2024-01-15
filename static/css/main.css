@@ -125,4 +125,19 @@ form {
     margin-top: 20px;
     padding: auto;
 }
+/* this is to make the image logos responsive to smaller screens*/
+@media only screen and (max-width: 960px) {
+    .image-one {
+        width: 50%;
+        height: 50%;
+    }
+    .image-two {
+        width: 50%;
+        height: 50%;
+    }
+    .image-three {
+        width: 50%;
+        height: 50%;
+    }
+}
 /* Your existing CSS styles */
