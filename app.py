@@ -1,10 +1,13 @@
 import email
 from datetime import datetime
+from email.policy import default
+from re import T
 from turtle import title
 from flask import Flask, render_template, url_for, request, redirect, flash
 import flask 
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, login_required, logout_user, current_user
+from sqlalchemy import Nullable
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
@@ -115,10 +118,15 @@ def logout():
 
 # update User to inherit from UserMixin here:
 class User(UserMixin,db.Model):
+  __tablename__ = "users"
   id = db.Column(db.Integer, primary_key=True)
   username = db.Column(db.String(50), unique=True, nullable=False)
   password = db.Column(db.String(50), nullable=False)
-  email = db.Column(db.String(120), unique=True)
+  email = db.Column(db.String(120), unique=True, nullable=False)
+  is_confirmed = db.Column(db.Boolean, nullable=False, default=False)
+  confirmed_on = db.Column(db.DateTime, nullable=True)
+  created_on = db.Column(db.DateTime, nullable=False)
+  is_admin = db.Column(db.Boolean, nullable=False, default=False)
 
 if __name__ == '__main__':
    with app.app_context():
