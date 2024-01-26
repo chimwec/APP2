@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, login_required, logout_user
 from werkzeug.security import check_password_hash
@@ -92,7 +92,7 @@ def login():
             if check_password_hash(user.password, password):
                 login_user(user)
 
-                flask.flash('Logged in succeessfully.')
+                flash('Logged in succeessfully.')
                 
                 return redirect(url_for('index'))
             else:
