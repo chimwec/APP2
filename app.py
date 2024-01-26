@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, login_required, logout_user
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Email, EqualTo
@@ -11,9 +11,12 @@ from wtforms.validators import DataRequired, Email, EqualTo
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'you-will-never-guess'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////full/path/to/my_database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///myDB.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
+
+print(f"SQLite Database Path: {app.config['SQLALCHEMY_DATABASE_URI']}")
 
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
@@ -61,12 +64,12 @@ class RegistrationForm(FlaskForm):
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    form = RegistrationForm(csrf_enabled=False)
+    form = RegistrationForm()
     if form.validate_on_submit():
     # define user with data from form here:
         user = User(username=form.username.data, email=form.email.data)
     # set user's password here:
-        user.set_password(form.password.data)
+        user.password = generate_password_hash(form.password.data)
         db.session.add(user)
         db.session.commit()
     return render_template('register.html', title='Register', form=form)
@@ -92,7 +95,7 @@ def login():
             if check_password_hash(user.password, password):
                 login_user(user)
 
-                flash('Logged in succeessfully.')
+                flash('Logged in successfully.')
                 
                 return redirect(url_for('index'))
             else:
@@ -110,7 +113,7 @@ def logout():
     return redirect(url_for('index'))
 
 # update User to inherit from UserMixin here:
-class User(UserMixin,db.Model):
+class User(db.Model, UserMixin):
   __tablename__ = "users"
   id = db.Column(db.Integer, primary_key=True)
   username = db.Column(db.String(50), unique=True, nullable=False)
