@@ -18,6 +18,7 @@ db = SQLAlchemy(app)
 
 print(f"SQLite Database Path: {app.config['SQLALCHEMY_DATABASE_URI']}")
 
+
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
