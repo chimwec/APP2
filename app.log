@@ -1,0 +1,198 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:09] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:12] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:12] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:15] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:15] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:16] "GET /game HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:18] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /register [GET]
+Traceback (most recent call last):
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chimw\appnew\APP2\app.py", line 93, in register
+    form = RegistrationForm()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 147, in generate_csrf_token
+    return generate_csrf(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 36, in generate_csrf
+    secret_key = _get_config(
+                 ^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 136, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:34] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:41] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:44] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:49] "GET /game HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:53] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /register [GET]
+Traceback (most recent call last):
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chimw\appnew\APP2\app.py", line 93, in register
+    form = RegistrationForm()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 147, in generate_csrf_token
+    return generate_csrf(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 36, in generate_csrf
+    secret_key = _get_config(
+                 ^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 136, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:40:59] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:05] "GET /game HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:07] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:08] "GET /news HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:09] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:10] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:13] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /register [GET]
+Traceback (most recent call last):
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chimw\appnew\APP2\app.py", line 93, in register
+    form = RegistrationForm()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 147, in generate_csrf_token
+    return generate_csrf(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 36, in generate_csrf
+    secret_key = _get_config(
+                 ^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 136, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:41:14] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /register [GET]
+Traceback (most recent call last):
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chimw\appnew\APP2\app.py", line 93, in register
+    form = RegistrationForm()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 147, in generate_csrf_token
+    return generate_csrf(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 36, in generate_csrf
+    secret_key = _get_config(
+                 ^^^^^^^^^^^^
+  File "C:\Users\chimw\appnew\APP2\bad_man\Lib\site-packages\flask_wtf\csrf.py", line 136, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2024 11:49:41] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
