@@ -1,3 +1,5 @@
+from email.policy import default
+from enum import unique
 from flask import Flask, render_template, url_for, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, login_required, logout_user
@@ -5,6 +7,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Email, EqualTo
+from datetime import datetime
 
 
 
@@ -70,7 +73,7 @@ def register():
     # define user with data from form here:
         user = User(username=form.username.data, email=form.email.data)
     # set user's password here:
-        user.password = generate_password_hash(form.password.data)
+        user.set_password = generate_password_hash(form.password.data)
         db.session.add(user)
         db.session.commit()
     return render_template('register.html', title='Register', form=form)
@@ -114,15 +117,15 @@ def logout():
     return redirect(url_for('index'))
 
 # update User to inherit from UserMixin here:
-class User(db.Model, UserMixin):
+class User(UserMixin,db.Model):
   __tablename__ = "users"
   id = db.Column(db.Integer, primary_key=True)
-  username = db.Column(db.String(50), unique=True, nullable=False)
-  password = db.Column(db.String(50), nullable=False)
-  email = db.Column(db.String(120), unique=True, nullable=False)
-  is_confirmed = db.Column(db.Boolean, nullable=False, default=False)
-  confirmed_on = db.Column(db.DateTime, nullable=True)
-  created_on = db.Column(db.DateTime, nullable=False)
+  username = db.Column(db.String(64), index=True, unique=True)
+  password_hash= db.Column(db.String(50))
+  email = db.Column(db.String(120), index=True, unique=True)
+  is_confirmed = db.Column(db.Boolean, nullable=False, index=True, default=datetime.utcnow)
+  confirmed_on = db.Column(db.DateTime(), index=True, default=datetime.utcnow)
+  created_on = db.Column(db.DateTime(), index=True, default=datetime.utcnow)
   is_admin = db.Column(db.Boolean, nullable=False, default=False)
 
 if __name__ == '__main__':
