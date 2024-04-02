@@ -1,16 +1,20 @@
 /* Your updated CSS styles */
 .main-navigation {
-    background-color: none;
-    padding: 10px 0;
-    text-align: right; /* Aligns the navigation links to the right */
-    font-size: 20px;
+    top: 0px;
+    width: 1920px;
+    height: 187px;
+    background: #001F4B 0% 0% no-repeat padding-box;
+    opacity: 1;
+    left: 0px;
 }
+
 .h1 {
-    color: white;
-    display: inline-block;
-    margin: 20px;
-    font-size: 30px;
+    top: 276px;
+    width: 394px;
+    height: 175px;
+   
 }
+
 body {
     background-image: url('https://raw.githubusercontent.com/chimwec/images/main/background-image.jpg'); /* Replace with the actual path to your image */
     background-size: cover; /* This makes sure the image covers the whole page */
@@ -35,13 +39,7 @@ body {
     text-decoration: none;
 }
 
-.bottom-links {   /* this is for the block which contact and follow are in */
-    background-color: none;
-    color: whitesmoke;
-    text-align: center;
-    padding: 5px 0;
-    margin: 100px;
-}
+
 
 .bottom-links li {
     display: inline-block;
@@ -70,23 +68,26 @@ body {
 
 
 .image-one {
-    border: none;
-    height: 450px;
-    width: 450px;
-    margin: 100px;
+    top: 593px;
+    left: 160px;
+    width: 496px;
+    height: 267px;
 }
 
 .image-two {
-    height: 450px;
-    width: 450px;
-    margin: 100px;
+    top: 593px;
+    left: 712px;
+    width: 496px;
+    height: 267px;
+    
 }
+    
 .image-three {
-    border: none;
-    height: 450px;
-    width: 450px;
-    margin: 100px;
-}
+    top: 593px;
+    left: 712px;
+    width: 496px;
+    height: 267px;
+} 
 
 p { /* this is for all the paragraphs except for game and follow */
     text-align: center;
@@ -100,9 +101,15 @@ li { /* this is for all the list in game and follow */
 }
 
 form {
-    color:white;
+    top: 45px;
+    width: 79px;
+    height: 36px;
     text-align: left;
-    margin: 20px; /* Adjust the value as needed */
+    font: normal normal normal 30px/36px Museo Sans 700;
+    letter-spacing: 0px;
+    color: #001F4B;
+    opacity: 1;
+    left: 1769px;
     
 }
 
