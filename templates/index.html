@@ -12,17 +12,11 @@
     
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/chimwec/images/main/Nyasa_logo_300px.png">
+    <img src="C:\Users\chimw\Downloads\Dateien (1)\Fotos\nyasa logo-07.png" alt="nyasa logo" class="logo">
 
     {% block content %}
 
-    <form class="form" method="post" action="{{ url_for('index') }}">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-
+    <form class="form" method="post" action="/login">
         <button type="submit">Login</button>
     </form>
 
@@ -36,6 +30,7 @@
         <li><a href="{{ url_for('about') }}">About</a></li>
         <li><a href="{{ url_for('game') }}">Game</a></li>
         <li><a href="{{ url_for('news') }}">News</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
     </ul>
     </div>
 </nav>
@@ -47,11 +42,11 @@
 </nav>
 <div class="slider">
 
-<div><img src="https://raw.githubusercontent.com/chimwec/images/main/nlogo.jpeg" class="image-one"></div>
+<div><img src="C:\Users\chimw\AppData\Local\Temp\939c5f4b-9203-45c9-b37f-0f2ee65cfc54_Dateien.zip.c54\Fotos\Foto1.jpg" class="image-one"></div>
 
-<div><img src="https://raw.githubusercontent.com/chimwec/images/main/warrior.png" class="image-two"></div>
+<div><img src="C:\Users\chimw\AppData\Local\Temp\b0a9f83f-9b42-4862-bf77-4299490e77a2_Dateien.zip.7a2\Fotos\Foto2.jpg" class="image-two"></div>
 
-<div><img src="https://raw.githubusercontent.com/chimwec/images/main/firelogo.png" class="image-three"></div>
+<div><img src="C:\Users\chimw\AppData\Local\Temp\11b91ff5-5e48-40e6-9fef-feb6ed133a9f_Dateien.zip.a9f\Fotos\Foto3.jpg" class="image-three"></div>
 </div>
 
 

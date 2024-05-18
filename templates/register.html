@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block content %}
+<form class="form" method="post" action="/register">
+    <label for="username">
+        Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <div class="child-1" id="div-1">
+    <label for="surname">Surname:</label>
+    <input type="surname" id="surname" name="surname" required><br>
+    </div>
+
+    <div class="child-2" id="div-2">
+    <label for="username">Username:</label>
+    <input type="username" id="username" name="username" required><br>
+    </div>
+
+    <div class="child-2" id="div-2">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        </div>
+
+    <div class="child-3" id="div-3">
+    <label for="password">Password:</label>
+    <input type="password" id="surname" name="password" required><br>
+    </div>
+
+    <div class="child-4" id="div-4">
+    <button type="submit">register</button>
+    </div>
+
+</form>
+<a href="/home">Back to Home</a>  
+
+<!-- Include this where you want to display flash messages -->
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flashes">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+{% endblock %}
